@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Card>
+
+<table>
+    <thead>
+        <tr>
+            <th>Drawn Cards</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(x => item.Value)
+                    @Html.DisplayFor(x => item.Suit)
+                    @Html.DisplayFor(x => item.Image)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
